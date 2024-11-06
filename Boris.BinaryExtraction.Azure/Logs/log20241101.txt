@@ -1,0 +1,15 @@
+[2024-11-01 18:47:00 INF] Starting up the service...
+[2024-11-01 18:47:23 INF] Worker running at: "2024-11-01T18:47:23.8457973+05:30"
+[2024-11-01 18:47:50 INF] Starting extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=Boris_admin;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
+[2024-11-01 18:47:55 INF] Starting MoveAttachmentData process.
+[2024-11-01 18:48:13 ERR] Error in MoveAttachmentData
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Boris.BinaryExtraction.Azure.AzureStorageProviderService.GetAzureBSConfigs(String connectionString, String databaseName, Int32 externalBinaryProviderId) in D:\Repos\Boris.BinaryExtraction.Azure\Boris.BinaryExtraction.Azure\AzureStorageProviderService.cs:line 102
+   at Boris.BinaryExtraction.Azure.MultiThreadingService.MoveAttachmentData(String connectionString, String databaseName) in D:\Repos\Boris.BinaryExtraction.Azure\Boris.BinaryExtraction.Azure\MultiThreadingService.cs:line 67
+[2024-11-01 18:48:43 INF] Starting MoveGenericAttachmentData process.
+[2024-11-01 18:48:44 INF] Starting MoveWorkOrderAttachmentData process.
+[2024-11-01 18:48:45 INF] Completed extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=Boris_admin;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
+[2024-11-01 18:48:50 INF] Starting extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=boris_qa;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
+[2024-11-01 18:48:55 INF] Starting MoveAttachmentData process.
+[2024-11-01 18:50:01 ERR] Method: UploadToAzure| Entity: Azure | Database: boris_qa | Retrying operation for Blob: 434273. Error: Created
+[2024-11-01 18:50:10 ERR] Method: UploadToAzure| Entity: Azure | Database: boris_qa | Retrying operation for Blob: 434274. Error: Created

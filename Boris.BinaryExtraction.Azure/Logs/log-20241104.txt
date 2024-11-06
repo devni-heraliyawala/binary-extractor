@@ -1,0 +1,240 @@
+[2024-11-04 21:40:31 INF] Starting up the service...
+[2024-11-04 21:40:36 INF] Worker running at: "2024-11-04T21:40:36.5070990+05:30"
+[2024-11-04 21:40:36 INF] Starting extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=boris_qa;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
+[2024-11-04 21:40:41 INF] Starting MoveAttachmentData process. Database: boris_qa
+[2024-11-04 21:41:01 INF] Upload to Azure Started for BlobName : 434274, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:41:27 WRN] Method: UploadToAzure| Entity: Azure | Database: boris_qa | Container Name :dbextqamt | Desc: Initial upload attempt failed for Blob: DB_External/magic5_mcm/Attachments/434274. Retrying with retry policy. Error: The specified blob already exists.
+[2024-11-04 21:41:40 ERR] Method: UploadToAzure| Entity: Azure | Database: boris_qa | Container Name :dbextqamt | Retrying operation for Blob: 434274. Error: The specified blob already exists.
+[2024-11-04 21:42:20 ERR] Method: UploadToAzure| Entity: Azure | Database: boris_qa | Container Name :dbextqamt | ExternalPath : DB_External/magic5_mcm/Attachments| BlobName : DB_External/magic5_mcm/Attachments/434274 | Message: The specified blob already exists.| StackTrace:   at Microsoft.WindowsAzure.Storage.Core.Executor.Executor.ExecuteAsyncInternal[T](RESTCommand`1 cmd, IRetryPolicy policy, OperationContext operationContext, CancellationToken token)
+   at Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob.UploadFromStreamAsyncHelper(Stream source, Nullable`1 length, AccessCondition accessCondition, BlobRequestOptions options, OperationContext operationContext, IProgress`1 progressHandler, CancellationToken cancellationToken)
+   at Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob.UploadFromStreamAsyncHelper(Stream source, Nullable`1 length, AccessCondition accessCondition, BlobRequestOptions options, OperationContext operationContext, CancellationToken cancellationToken)
+   at Boris.BinaryExtraction.Azure.AzureStorageProviderService.UploadToAzure(String databaseName, String blobName, Byte[] fileContent, AzureBSConfig azureBSConfig) in D:\Repos\Boris.BinaryExtraction.Azure\Boris.BinaryExtraction.Azure\AzureStorageProviderService.cs:line 86
+[2024-11-04 21:43:42 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434274 | Desc: Azure upload success!
+[2024-11-04 21:43:46 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434274 | Desc: SQL update success!
+[2024-11-04 21:44:03 INF] Upload to Azure Started for BlobName : 434284, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:05 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434284 | Desc: Azure upload success!
+[2024-11-04 21:44:05 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434284 | Desc: SQL update success!
+[2024-11-04 21:44:05 INF] Upload to Azure Started for BlobName : 434285, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:06 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434285 | Desc: Azure upload success!
+[2024-11-04 21:44:06 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434285 | Desc: SQL update success!
+[2024-11-04 21:44:06 INF] Upload to Azure Started for BlobName : 434286, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:07 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434286 | Desc: Azure upload success!
+[2024-11-04 21:44:07 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434286 | Desc: SQL update success!
+[2024-11-04 21:44:07 INF] Upload to Azure Started for BlobName : 434287, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:09 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434287 | Desc: Azure upload success!
+[2024-11-04 21:44:09 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434287 | Desc: SQL update success!
+[2024-11-04 21:44:09 INF] Upload to Azure Started for BlobName : 434288, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:10 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434288 | Desc: Azure upload success!
+[2024-11-04 21:44:10 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434288 | Desc: SQL update success!
+[2024-11-04 21:44:10 INF] Upload to Azure Started for BlobName : 434289, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:11 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434289 | Desc: Azure upload success!
+[2024-11-04 21:44:11 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434289 | Desc: SQL update success!
+[2024-11-04 21:44:11 INF] Upload to Azure Started for BlobName : 434290, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:12 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434290 | Desc: Azure upload success!
+[2024-11-04 21:44:12 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434290 | Desc: SQL update success!
+[2024-11-04 21:44:12 INF] Upload to Azure Started for BlobName : 434291, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:14 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434291 | Desc: Azure upload success!
+[2024-11-04 21:44:14 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434291 | Desc: SQL update success!
+[2024-11-04 21:44:14 INF] Upload to Azure Started for BlobName : 434292, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:15 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434292 | Desc: Azure upload success!
+[2024-11-04 21:44:15 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434292 | Desc: SQL update success!
+[2024-11-04 21:44:15 INF] Upload to Azure Started for BlobName : 434293, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:23 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434293 | Desc: Azure upload success!
+[2024-11-04 21:44:23 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434293 | Desc: SQL update success!
+[2024-11-04 21:44:23 INF] Upload to Azure Started for BlobName : 434294, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:25 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434294 | Desc: Azure upload success!
+[2024-11-04 21:44:25 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434294 | Desc: SQL update success!
+[2024-11-04 21:44:25 INF] Upload to Azure Started for BlobName : 434295, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:27 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434295 | Desc: Azure upload success!
+[2024-11-04 21:44:27 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434295 | Desc: SQL update success!
+[2024-11-04 21:44:27 INF] Upload to Azure Started for BlobName : 434296, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:29 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434296 | Desc: Azure upload success!
+[2024-11-04 21:44:29 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434296 | Desc: SQL update success!
+[2024-11-04 21:44:29 INF] Upload to Azure Started for BlobName : 434297, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:32 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434297 | Desc: Azure upload success!
+[2024-11-04 21:44:33 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434297 | Desc: SQL update success!
+[2024-11-04 21:44:33 INF] Upload to Azure Started for BlobName : 434298, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:33 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434298 | Desc: Azure upload success!
+[2024-11-04 21:44:33 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434298 | Desc: SQL update success!
+[2024-11-04 21:44:33 INF] Upload to Azure Started for BlobName : 434299, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:34 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434299 | Desc: Azure upload success!
+[2024-11-04 21:44:34 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434299 | Desc: SQL update success!
+[2024-11-04 21:44:34 INF] Upload to Azure Started for BlobName : 434300, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:35 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434300 | Desc: Azure upload success!
+[2024-11-04 21:44:35 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434300 | Desc: SQL update success!
+[2024-11-04 21:44:35 INF] Upload to Azure Started for BlobName : 434301, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:35 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434301 | Desc: Azure upload success!
+[2024-11-04 21:44:35 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434301 | Desc: SQL update success!
+[2024-11-04 21:44:35 INF] Upload to Azure Started for BlobName : 434302, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:36 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434302 | Desc: Azure upload success!
+[2024-11-04 21:44:36 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434302 | Desc: SQL update success!
+[2024-11-04 21:44:36 INF] Upload to Azure Started for BlobName : 434303, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:37 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434303 | Desc: Azure upload success!
+[2024-11-04 21:44:37 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434303 | Desc: SQL update success!
+[2024-11-04 21:44:37 INF] Upload to Azure Started for BlobName : 434304, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:37 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434304 | Desc: Azure upload success!
+[2024-11-04 21:44:37 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434304 | Desc: SQL update success!
+[2024-11-04 21:44:37 INF] Upload to Azure Started for BlobName : 434305, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:38 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434305 | Desc: Azure upload success!
+[2024-11-04 21:44:38 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434305 | Desc: SQL update success!
+[2024-11-04 21:44:38 INF] Upload to Azure Started for BlobName : 434306, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:39 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434306 | Desc: Azure upload success!
+[2024-11-04 21:44:39 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434306 | Desc: SQL update success!
+[2024-11-04 21:44:39 INF] Upload to Azure Started for BlobName : 434307, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:39 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434307 | Desc: Azure upload success!
+[2024-11-04 21:44:39 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434307 | Desc: SQL update success!
+[2024-11-04 21:44:39 INF] Upload to Azure Started for BlobName : 434308, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:40 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434308 | Desc: Azure upload success!
+[2024-11-04 21:44:40 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434308 | Desc: SQL update success!
+[2024-11-04 21:44:40 INF] Upload to Azure Started for BlobName : 434309, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:41 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434309 | Desc: Azure upload success!
+[2024-11-04 21:44:41 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434309 | Desc: SQL update success!
+[2024-11-04 21:44:41 INF] Upload to Azure Started for BlobName : 434310, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:42 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434310 | Desc: Azure upload success!
+[2024-11-04 21:44:42 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434310 | Desc: SQL update success!
+[2024-11-04 21:44:42 INF] Upload to Azure Started for BlobName : 434311, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:43 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434311 | Desc: Azure upload success!
+[2024-11-04 21:44:43 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434311 | Desc: SQL update success!
+[2024-11-04 21:44:43 INF] Upload to Azure Started for BlobName : 434312, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:43 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434312 | Desc: Azure upload success!
+[2024-11-04 21:44:43 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434312 | Desc: SQL update success!
+[2024-11-04 21:44:43 INF] Upload to Azure Started for BlobName : 434313, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:44 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434313 | Desc: Azure upload success!
+[2024-11-04 21:44:44 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434313 | Desc: SQL update success!
+[2024-11-04 21:44:44 INF] Upload to Azure Started for BlobName : 434314, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:45 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434314 | Desc: Azure upload success!
+[2024-11-04 21:44:45 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434314 | Desc: SQL update success!
+[2024-11-04 21:44:45 INF] Upload to Azure Started for BlobName : 434315, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:46 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434315 | Desc: Azure upload success!
+[2024-11-04 21:44:46 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434315 | Desc: SQL update success!
+[2024-11-04 21:44:46 INF] Upload to Azure Started for BlobName : 434316, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:46 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434316 | Desc: Azure upload success!
+[2024-11-04 21:44:46 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434316 | Desc: SQL update success!
+[2024-11-04 21:44:46 INF] Upload to Azure Started for BlobName : 434317, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:47 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434317 | Desc: Azure upload success!
+[2024-11-04 21:44:47 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434317 | Desc: SQL update success!
+[2024-11-04 21:44:47 INF] Upload to Azure Started for BlobName : 434318, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:48 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434318 | Desc: Azure upload success!
+[2024-11-04 21:44:48 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434318 | Desc: SQL update success!
+[2024-11-04 21:44:48 INF] Upload to Azure Started for BlobName : 434319, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:48 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434319 | Desc: Azure upload success!
+[2024-11-04 21:44:48 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434319 | Desc: SQL update success!
+[2024-11-04 21:44:48 INF] Upload to Azure Started for BlobName : 434320, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:49 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434320 | Desc: Azure upload success!
+[2024-11-04 21:44:49 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434320 | Desc: SQL update success!
+[2024-11-04 21:44:49 INF] Upload to Azure Started for BlobName : 434321, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:50 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434321 | Desc: Azure upload success!
+[2024-11-04 21:44:50 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434321 | Desc: SQL update success!
+[2024-11-04 21:44:50 INF] Upload to Azure Started for BlobName : 434322, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:50 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434322 | Desc: Azure upload success!
+[2024-11-04 21:44:50 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434322 | Desc: SQL update success!
+[2024-11-04 21:44:50 INF] Upload to Azure Started for BlobName : 434323, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:51 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434323 | Desc: Azure upload success!
+[2024-11-04 21:44:51 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434323 | Desc: SQL update success!
+[2024-11-04 21:44:51 INF] Upload to Azure Started for BlobName : 434324, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:52 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434324 | Desc: Azure upload success!
+[2024-11-04 21:44:52 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434324 | Desc: SQL update success!
+[2024-11-04 21:44:52 INF] Upload to Azure Started for BlobName : 434325, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:52 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434325 | Desc: Azure upload success!
+[2024-11-04 21:44:52 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434325 | Desc: SQL update success!
+[2024-11-04 21:44:52 INF] Upload to Azure Started for BlobName : 434326, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:53 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434326 | Desc: Azure upload success!
+[2024-11-04 21:44:53 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434326 | Desc: SQL update success!
+[2024-11-04 21:44:53 INF] Upload to Azure Started for BlobName : 434327, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:54 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434327 | Desc: Azure upload success!
+[2024-11-04 21:44:54 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434327 | Desc: SQL update success!
+[2024-11-04 21:44:54 INF] Upload to Azure Started for BlobName : 434328, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:55 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434328 | Desc: Azure upload success!
+[2024-11-04 21:44:55 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434328 | Desc: SQL update success!
+[2024-11-04 21:44:55 INF] Upload to Azure Started for BlobName : 434329, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:55 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434329 | Desc: Azure upload success!
+[2024-11-04 21:44:55 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434329 | Desc: SQL update success!
+[2024-11-04 21:44:55 INF] Upload to Azure Started for BlobName : 434330, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:56 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434330 | Desc: Azure upload success!
+[2024-11-04 21:44:56 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434330 | Desc: SQL update success!
+[2024-11-04 21:44:56 INF] Upload to Azure Started for BlobName : 434331, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:57 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434331 | Desc: Azure upload success!
+[2024-11-04 21:44:57 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434331 | Desc: SQL update success!
+[2024-11-04 21:44:57 INF] Upload to Azure Started for BlobName : 434332, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:58 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434332 | Desc: Azure upload success!
+[2024-11-04 21:44:58 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434332 | Desc: SQL update success!
+[2024-11-04 21:44:58 INF] Upload to Azure Started for BlobName : 434333, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:58 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434333 | Desc: Azure upload success!
+[2024-11-04 21:44:58 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434333 | Desc: SQL update success!
+[2024-11-04 21:44:58 INF] Upload to Azure Started for BlobName : 434334, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:44:59 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434334 | Desc: Azure upload success!
+[2024-11-04 21:44:59 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434334 | Desc: SQL update success!
+[2024-11-04 21:44:59 INF] Upload to Azure Started for BlobName : 434335, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:00 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434335 | Desc: Azure upload success!
+[2024-11-04 21:45:00 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434335 | Desc: SQL update success!
+[2024-11-04 21:45:00 INF] Upload to Azure Started for BlobName : 434336, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:01 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434336 | Desc: Azure upload success!
+[2024-11-04 21:45:01 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434336 | Desc: SQL update success!
+[2024-11-04 21:45:01 INF] Upload to Azure Started for BlobName : 434337, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:02 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434337 | Desc: Azure upload success!
+[2024-11-04 21:45:02 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434337 | Desc: SQL update success!
+[2024-11-04 21:45:02 INF] Upload to Azure Started for BlobName : 434338, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:02 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434338 | Desc: Azure upload success!
+[2024-11-04 21:45:02 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434338 | Desc: SQL update success!
+[2024-11-04 21:45:02 INF] Upload to Azure Started for BlobName : 434339, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:03 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434339 | Desc: Azure upload success!
+[2024-11-04 21:45:03 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434339 | Desc: SQL update success!
+[2024-11-04 21:45:03 INF] Upload to Azure Started for BlobName : 434340, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:04 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434340 | Desc: Azure upload success!
+[2024-11-04 21:45:04 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434340 | Desc: SQL update success!
+[2024-11-04 21:45:04 INF] Upload to Azure Started for BlobName : 434341, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:05 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434341 | Desc: Azure upload success!
+[2024-11-04 21:45:05 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434341 | Desc: SQL update success!
+[2024-11-04 21:45:05 INF] Upload to Azure Started for BlobName : 434342, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:06 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434342 | Desc: Azure upload success!
+[2024-11-04 21:45:06 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434342 | Desc: SQL update success!
+[2024-11-04 21:45:06 INF] Upload to Azure Started for BlobName : 434343, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:07 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434343 | Desc: Azure upload success!
+[2024-11-04 21:45:07 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434343 | Desc: SQL update success!
+[2024-11-04 21:45:07 INF] Upload to Azure Started for BlobName : 434344, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:07 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434344 | Desc: Azure upload success!
+[2024-11-04 21:45:07 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434344 | Desc: SQL update success!
+[2024-11-04 21:45:07 INF] Upload to Azure Started for BlobName : 434345, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:08 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434345 | Desc: Azure upload success!
+[2024-11-04 21:45:08 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434345 | Desc: SQL update success!
+[2024-11-04 21:45:08 INF] Upload to Azure Started for BlobName : 434346, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:16 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434346 | Desc: Azure upload success!
+[2024-11-04 21:45:16 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434346 | Desc: SQL update success!
+[2024-11-04 21:45:16 INF] Upload to Azure Started for BlobName : 434347, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:17 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434347 | Desc: Azure upload success!
+[2024-11-04 21:45:17 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434347 | Desc: SQL update success!
+[2024-11-04 21:45:17 INF] Upload to Azure Started for BlobName : 434348, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:17 INF] Method: MoveAttachmentData | Entity: Azure | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434348 | Desc: Azure upload success!
+[2024-11-04 21:45:17 INF] Method: MoveAttachmentData | Entity: SQL | Database: boris_qa | Container Name: dbextqamt | Table: tblAttachments | Id : 434348 | Desc: SQL update success!
+[2024-11-04 21:45:17 INF] Upload to Azure Started for BlobName : 434349, ExternalPath : DB_External/magic5_mcm/Attachments, Container Name : dbextqamt
+[2024-11-04 21:45:43 INF] Starting up the service...
+[2024-11-04 21:46:09 INF] Starting up the service...
+[2024-11-04 21:46:17 INF] Worker running at: "2024-11-04T21:46:17.4766442+05:30"
+[2024-11-04 21:46:17 INF] Starting extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=boris_qa;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
+[2024-11-04 21:47:41 INF] Starting up the service...
+[2024-11-04 21:48:03 INF] Worker running at: "2024-11-04T21:48:03.8663913+05:30"
+[2024-11-04 21:48:03 INF] Starting extraction for Database: boris_qa
+[2024-11-04 21:48:09 INF] Starting MoveAttachmentData process. Database: boris_qa
+[2024-11-04 21:50:49 INF] Starting up the service...
+[2024-11-04 21:51:46 INF] Starting up the service...
+[2024-11-04 21:51:52 INF] Worker running at: "2024-11-04T21:51:52.5051509+05:30"
+[2024-11-04 21:51:52 INF] Starting extraction for Database: boris_qa
+[2024-11-04 21:51:54 INF] Starting MoveAttachmentData process. Database: boris_qa
+[2024-11-04 21:51:54 INF] Starting MoveGenericAttachmentData process. Database: boris_qa
+[2024-11-04 21:51:54 INF] Starting MoveWorkOrderAttachmentData process. Database: boris_qa
+[2024-11-04 21:51:58 INF]  Method : SanityCheckAttachments, Database : boris_qa, Table: tblAttachments, Desc: Sanity check started!. 
+[2024-11-04 21:54:10 ERR] Method: SanityCheckAttachments, Database: boris_qa, Table: tblAttachments, Desc: Id: 434391 not found in the Container: dbextqamt, ExternalPath: DB_External/magic5_mcm/Attachments, BlobName: DB_External/magic5_mcm/Attachments/434391
+[2024-11-04 21:56:13 INF] Method : SanityCheckAttachments, Database: boris_qa, Table: tblAttachments, Desc: Sanity check results; SQL Attachment Count:255, Blob Count:254
+[2024-11-04 21:56:13 INF] Method : SanityCheckAttachments, Database: boris_qa, Table: tblAttachments, Desc: Sanity check results; SQL Attachment Count: -1, Blob Count: -1
+[2024-11-04 21:56:13 INF] Completed extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=boris_qa;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
+[2024-11-04 22:02:40 INF] Starting up the service...
+[2024-11-04 22:02:48 INF] Worker running at: "2024-11-04T22:02:48.8067248+05:30"
+[2024-11-04 22:02:48 INF] Starting extraction for Database: boris_qa
+[2024-11-04 22:02:48 INF] Starting MoveAttachmentData process. Database: boris_qa
+[2024-11-04 22:02:48 INF] Starting MoveGenericAttachmentData process. Database: boris_qa
+[2024-11-04 22:02:48 INF] Starting MoveWorkOrderAttachmentData process. Database: boris_qa
+[2024-11-04 22:02:49 INF]  Method : SanityCheckAttachments, Database : boris_qa, Table: tblAttachments, Desc: Sanity check started!. 
+[2024-11-04 22:03:40 ERR] Method: SanityCheckAttachments, Database: boris_qa, Table: tblAttachments, Desc: Id: 434391 not found in the Container: dbextqamt, ExternalPath: DB_External/magic5_mcm/Attachments, BlobName: DB_External/magic5_mcm/Attachments/434391
+[2024-11-04 22:03:41 INF] Method : SanityCheckAttachments, Database: boris_qa, Table: tblAttachments, Desc: Sanity check results; SQL Attachment Count:255, Blob Count:254, Remaining Attachment Count:52
+[2024-11-04 22:03:41 INF] Method : SanityCheckAttachments, Database: boris_qa, Table: tblAttachments, Desc: Sanity check results; SQL Attachment Count: -1, Blob Count: -1, Remaining Attachment Count: -1
+[2024-11-04 22:03:41 INF] Completed extraction for database with connection string: Data Source=DESKTOP-LNSJPD7\MSSQLSERVER01;Initial Catalog=boris_qa;Integrated Security=True;TrustServerCertificate=True;Encrypt=True;
