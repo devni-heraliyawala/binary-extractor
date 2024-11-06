@@ -38,6 +38,7 @@ To set up the tool, adjust the following sections in the `appsettings.json` file
       - **EnableForMigration:** Turn on/off migration.
       - **ConcurrentCount:** Number of processes running concurrently.
       - **BatchSize:** Sets the number of items processed in one batch.
+      - **ChunkSize:** Breaks down a batch into smaller "chunks" for easier handling. For example, if BatchSize is set to 200 and ChunkSize is set to 10, each batch will be processed in chunks of 10 items at a time, which helps manage resources and improve stability during processing
 
 3. **Serilog:** Configures logging settings. Logs are directed to the console by default but can also be written to files organized by database name for easier tracking.
 
