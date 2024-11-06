@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Boris.BinaryExtraction.Azure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+caa01f1a3dfce085fd7816b3e2bd46aa1f07a248")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c324154e2ce8c0a85b46175ab953c4f48ee9f2c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Boris.BinaryExtraction.Azure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Boris.BinaryExtraction.Azure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
