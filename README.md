@@ -18,13 +18,9 @@ The Binary Extraction Tool is a Windows service that automates the extraction an
 
 ## Technologies Used
 * **C#** with **.NET Core (.NET 8)**  for building the Windows service.
-
 * **Microsoft WindowsAzure Storage** for file storage and retrieval.
-
 * **Serilog** for structured logging and dynamic logging based on database context.
-
 * **Dependency Injection** for service management and configuration.
-
 * **Abstract Factory Pattern** for database-specific service creation.
 
 ## Architecture
@@ -58,30 +54,24 @@ To set up the tool, adjust the following sections in the `appsettings.json` file
 
 ## Installation
 * Install and configure the service to run on Windows.
-
 * The service will automatically execute its binary extraction and sanity checks based on the settings provided in `appsettings.json`.
 
 ## Deployment
 ### 1. Execute the Windows Service Locally (for testing)
 * **Run in Debug Mode:**
    * Open the project in Visual Studio.
-
    * Set the project as the startup project.
-
    * Click Start Debugging (F5) to run it as a console application.
-
    * This is useful for testing and debugging before deploying.
 
 * **Install the Service:**
    * First, publish the project by right-clicking on the project in Visual Studio, selecting Publish, and following the instructions.
-
    * After publishing, open a command prompt with administrator privileges.
-
    * Use the `sc` command to install the service:
       ```
       sc create BinaryExtractorAzure binPath= "C:\Path\To\Your\Executable\Boris.BinaryExtraction.Azure.exe"
       ```
-* Replace `C:\Path\To\Your\Executable` with the path to the published `.exe` file.
+   * Replace `C:\Path\To\Your\Executable` with the path to the published `.exe` file.
 
 * **Start the service:**
    * Start the service using the following command:
@@ -111,31 +101,24 @@ Open the Start Menu, search for **Task Scheduler**, and open it.
 * **Create a New Task:**
 
    * Select **Create Task** from the **Actions** pane.
-
    * Under the **General** tab, give your task a name, like "Run My Windows Service Every Saturday."
-
    * Set the task to run using a high-privilege account if needed.
 
 * **Set the Trigger:**
 
    * Go to the **Triggers** tab and click **New**.
-
    * Set the **Begin the task** dropdown to **On a schedule**.
-
    * Choose **Weekly** and select **Saturday** with your desired time.
 
 * **Set the Action:**
 
    * Go to the **Actions** tab and click **New**.
-
    * Set the **Action** dropdown to Start a **Program**.
    * In the **Program/script** field, enter the path to `sc.exe`.
-
    * In the **Add arguments (optional)** field, enter the following arguments to start your service
       ```
       start BinaryExtractorAzure 
       ```
-
    * Create another action to stop the service if you want to end it after it runs. Use the arguments:
       ```
       stop BinaryExtractorAzure
@@ -150,9 +133,7 @@ The tool uses Serilog for logging and creates a separate log file for each datab
 
 Log file structure:
 * **Information Logs:** Start, progress, and completion messages for each operation.
-
 * **Error Logs:** Detailed error messages for any failed operation, including exception details.
-
 * **Performance Tracking:** Duration of each operation, including extraction, sanity checks, and blob uploads.
 
 ## Usage
