@@ -41,8 +41,8 @@ The tool is designed using modular classes for each of its core functionalities:
 ## Configuration Guide
 To set up the tool, adjust the following sections in the `appsettings.json` file:
      
-1. **ConnectionStrings:** Add connection strings for each database that requires automated data extraction. Name each connection string uniquely, such as "Boris_QA" or "Boris_Revamp".
-2. **AppSettings:** These settings control data extraction behavior for different attachment types:
+* **ConnectionStrings:** Add connection strings for each database that requires automated data extraction. Name each connection string uniquely, such as "Boris_QA" or "Boris_Revamp".
+* **AppSettings:** These settings control data extraction behavior for different attachment types:
    - **DefaultBatchSize:** Sets the general batch size for data processing.
    - **Attachments, GenericAttachments, WorkOrderAttachments:** Each section allows specific configurations:
       - **EnableForMigration:** Turn on/off migration.
@@ -50,7 +50,7 @@ To set up the tool, adjust the following sections in the `appsettings.json` file
       - **BatchSize:** Sets the number of items processed in one batch.
       - **ChunkSize:** Breaks down a batch into smaller "chunks" for easier handling. For example, if BatchSize is set to 200 and ChunkSize is set to 10, each batch will be processed in chunks of 10 items at a time, which helps manage resources and improve stability during processing
 
-3. **Serilog:** Configures logging settings. Logs are directed to the console by default but can also be written to files organized by database name for easier tracking.
+* **Serilog:** Configures logging settings. Logs are directed to the console by default but can also be written to files organized by database name for easier tracking.
 
 ## Installation
 * Install and configure the service to run on Windows.
@@ -99,19 +99,16 @@ To run the service every Saturday at a specific time, you can use Task Scheduler
 * **Open Task Scheduler:**
 Open the Start Menu, search for **Task Scheduler**, and open it.
 * **Create a New Task:**
-
    * Select **Create Task** from the **Actions** pane.
    * Under the **General** tab, give your task a name, like "Run My Windows Service Every Saturday."
    * Set the task to run using a high-privilege account if needed.
 
 * **Set the Trigger:**
-
    * Go to the **Triggers** tab and click **New**.
    * Set the **Begin the task** dropdown to **On a schedule**.
    * Choose **Weekly** and select **Saturday** with your desired time.
 
 * **Set the Action:**
-
    * Go to the **Actions** tab and click **New**.
    * Set the **Action** dropdown to Start a **Program**.
    * In the **Program/script** field, enter the path to `sc.exe`.
